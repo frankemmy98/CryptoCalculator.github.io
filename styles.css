@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+}
+
+#title {
+    font-size: 4rem;
+    color: cyan;
+    margin-top: 20px;
+    font-family: cursive;
+}
+
+input[type = number]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+input {
+    margin: 10px;
+}
+/* 
+.operators {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 10px 20px;
+    cursor: pointer; 
+}*/
+
+.boxwhite {
+    height: 100px;
+    width: 150px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 900;
+}
+
+.boxblack {
+    height: 100px;
+    width: 150px;
+    background-color: #000;
+    color: cyan;
+    font-weight: 900;
+}
+
+.cryptocurrency {
+    margin-top: 5%;
+    margin-bottom: 4%;
+} 
+
+ .crypto1, .crypto2, .crypto3, .crypto4, .crypto5 {
+     display: inline-block;
+     line-height: 2;
+ }
+
+ .crypto6, .crypto7, .crypto8, .crypto9, .crypto10 {
+    display: inline-block;
+    line-height: 2;
+}
