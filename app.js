@@ -1,19 +1,20 @@
-// get Data to their various pages 1
-const crypto1 = document.getElementById('btc')
-const crypto2 = document.getElementById('eth')
-const crypto3 = document.getElementById('btt')
-const crypto4 = document.getElementById('busd')
-const crypto5 = document.getElementById('luna')
-const crypto6 = document.getElementById('usdt')
-const crypto7 = document.getElementById('sol')
-const crypto8 = document.getElementById('bnb')
-const crypto9 = document.getElementById('xrp')
-const crypto10 = document.getElementById('dot')
-
+// get Data to their various pages 
+const cryptoArray = [
+    crypto1 = document.getElementById('btc'),
+    crypto2 = document.getElementById('eth'),
+    crypto3 = document.getElementById('btt'),
+    crypto4 = document.getElementById('busd'),
+    crypto5 = document.getElementById('luna'),
+    crypto6 = document.getElementById('usdt'),
+    crypto7 = document.getElementById('sol'),
+    crypto8 = document.getElementById('bnb'),
+    crypto9 = document.getElementById('xrp'),
+    crypto10 = document.getElementById('dot')
+]
 
 // Build request Url
 
-const buildRequestUrl = () => {
+function buildRequestUrl() {
       return 'https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,BTT,BUSD,LUNA,USDT,SOL,BNB,XRP,DOT&tsyms=USD'
 }
 
@@ -23,20 +24,16 @@ const requestCryptoCompare = async (url) => {
     const response = await fetch(url)
     const jsonResponse = await response.json()
     const crypto = jsonResponse
+
+    Object.entries(crypto).forEach(([key, value]) => {
+        return `${key}: ${value}`
+    })
     postToPage(crypto)
 }
-
-const postToPage = (crypto) => {
-      crypto1.innerHTML = crypto.BTC.USD
-      crypto2.innerHTML = crypto.ETH.USD
-      crypto3.innerHTML = crypto.BTT.USD
-      crypto4.innerHTML = crypto.BUSD.USD
-      crypto5.innerHTML = crypto.LUNA.USD
-      crypto6.innerHTML = crypto.USDT.USD
-      crypto7.innerHTML = crypto.SOL.USD
-      crypto8.innerHTML = crypto.BNB.USD
-      crypto9.innerHTML = crypto.XRP.USD
-      crypto10.innerHTML = crypto.DOT.USD
+    const postToPage = () => {
+    cryptoArray.forEach((cryptos) => {
+            return cryptos
+        })
 }
 
 const processRequest = async () => {
@@ -45,7 +42,6 @@ const processRequest = async () => {
 }
 
 processRequest()
-
 
 
 
