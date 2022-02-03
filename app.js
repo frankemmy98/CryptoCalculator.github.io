@@ -25,15 +25,12 @@ const requestCryptoCompare = async (url) => {
     const jsonResponse = await response.json()
     const crypto = jsonResponse
 
-    Object.entries(crypto).forEach(([key, value]) => {
-        return `${key}: ${value}`
-    })
     postToPage(crypto)
 }
     const postToPage = () => {
-    cryptoArray.forEach((cryptos) => {
-            return cryptos
-        })
+    for(let i = 0; i < cryptoArray.length; i++) {
+           cryptoArray[i].innerHTML = cryptos[i].USD
+        }
 }
 
 const processRequest = async () => {
