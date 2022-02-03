@@ -29,7 +29,7 @@ const requestCryptoCompare = async (url) => {
 }
     const postToPage = (cryptos) => {
     for(let i = 0; i < cryptoArray.length; i++) {
-           cryptoArray[i].innerHTML = cryptos[i].USD
+           cryptoArray[i].innerHTML = cryptos[i]
         }
 }
 
