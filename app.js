@@ -1,15 +1,15 @@
 // get Data to their various pages 
 const cryptoArray = [
-    crypto1 = document.getElementById('btc'),
-    crypto2 = document.getElementById('eth'),
-    crypto3 = document.getElementById('btt'),
-    crypto4 = document.getElementById('busd'),
-    crypto5 = document.getElementById('luna'),
-    crypto6 = document.getElementById('usdt'),
-    crypto7 = document.getElementById('sol'),
-    crypto8 = document.getElementById('bnb'),
-    crypto9 = document.getElementById('xrp'),
-    crypto10 = document.getElementById('dot')
+    crypto1 = document.getElementsByClassName('btc'),
+    crypto2 = document.getElementsByClassName('eth'),
+    crypto3 = document.getElementsByClassName('btt'),
+    crypto4 = document.getElementsByClassName('busd'),
+    crypto5 = document.getElementsByClassName('luna'),
+    crypto6 = document.getElementsByClassName('usdt'),
+    crypto7 = document.getElementsByClassName('sol'),
+    crypto8 = document.getElementsByClassName('bnb'),
+    crypto9 = document.getElementsByClassName('xrp'),
+    crypto10 = document.getElementsByClassName('dot')
 ]
 
 // Build request Url
