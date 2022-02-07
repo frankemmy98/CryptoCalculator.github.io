@@ -24,8 +24,9 @@ const requestCryptoCompare = async (url) => {
     const response = await fetch(url)
     const jsonResponse = await response.json()
     const crypto = jsonResponse
+    const convertResponse = JSON.parse(crypto)
 
-    postToPage(crypto)
+    postToPage(convertResponse)
 }
     const postToPage = (cryptos) => {
     for(let i = 0; i < cryptoArray.length; i++) {
